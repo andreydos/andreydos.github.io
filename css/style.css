@@ -3,30 +3,102 @@
     font-family: 'quicksand', Arial, sans-serif;
 }
 
-
 /*===== header =====*/
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #E0DEDE;
+    opacity: .6;
+    z-index: 10;
+}
+
 .site-title,
 .header-contact {
-    font-size: 28px;
+    display: inline-block;
+}
+
+.site-title {
+    padding: 10px;
 }
 
 .header-contact {
-    color: red;
+    width: 20%;
+    margin: 25px 0;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.socials-link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    background: white;
+    border-radius: 50%;
+    text-align: center;
+}
+.socials-link:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.socials-link i {
+    font-size: 22px;
+    line-height: 1.8;
+    color: #252222;
+}
+
+.socials-link i.fa-mobile {
+    font-size: 26px;
+    line-height: 1.5;
+}
+
+.socials-link:hover .fa-facebook{
+    color: #3b5998;
+}
+
+.socials-link:hover .fa-vk{
+    color: #00aced;
+}
+
+.socials-link:hover .fa-linkedin-square{
+    color: #007bb6;
+}
+
+.socials-link:hover .fa-mobile{
+    color: #bb0000;
 }
 
 /*===== end header =====*/
 
+
 /*===== main section =====*/
 
+#main-content {
+    padding-top: 100px;
+}
+
 .greeting {
-    color: green;
+    width: 50%;
+    padding: 20px;
+    color: #676868;
 }
 
 /*===== projects - common styles =====*/
 .projects-section {
     display: flex;
     flex-direction: row;
-    border: 1px solid grey;
     flex-wrap: wrap;
 }
 
@@ -51,15 +123,12 @@
     text-align: center;
 }
 
-.project-screenshot {
-    overflow: hidden;
-}
 
 .break-row {
     width: 33.333%;
 }
 
-/*===== END projects - common styles =====*/
+
 
 
 .project-1-wrapper,
@@ -90,18 +159,33 @@
     width: 33.333%;
 }
 
+.project-description {
+    position: relative;
+    padding: 10px 5%;
+
+}
+
+/*===== END projects - common styles =====*/
+
 
 .project-1-wrapper {
     flex-direction: row;
 }
 
-.project-1-wrapper .project-screenshot,
-.project-1-wrapper .project-description {
-    border: 1px solid red;
+
+.project-1-wrapper .project-screenshot {
+    background-color: #D0E8D4;
 }
 
-.project-1-wrapper .project-description {
-    border: 1px solid green;
+.project-1-wrapper .project-description .signpost {
+    position: absolute;
+    top: 45%;
+    right: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 50px 25px 0;
+    border-color: transparent white transparent transparent;
 }
 
 .project-2-wrapper {
@@ -109,40 +193,61 @@
     flex-direction: column;
 }
 
-.project-2-wrapper .project-screenshot,
-.project-2-wrapper .project-description {
-    border: 1px solid red;
+.project-2-wrapper .project-screenshot {
+    background-color: #9AC0DD;
 }
 
 .project-2-wrapper .project-description {
     position: absolute;
-    border: 1px solid green;
+}
+
+.project-2-wrapper .project-description .signpost {
+    position: absolute;
+    bottom: 100%;
+    left: 45%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 25px 50px 25px;
+    border-color: transparent transparent white transparent;
 }
 
 .project-3-wrapper {
     flex-direction: row-reverse;
 }
 
-.project-3-wrapper .project-screenshot,
-.project-3-wrapper .project-description {
-    border: 1px solid red;
+.project-3-wrapper .project-screenshot {
+    background-color: #9DE1CC;
 }
 
-.project-3-wrapper .project-description {
-    border: 1px solid green;
+.project-3-wrapper .project-description .signpost {
+    position: absolute;
+    top: 45%;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 0 25px 50px;
+    border-color: transparent transparent transparent white;
 }
 
 .project-4-wrapper {
     flex-direction: row;
 }
 
-.project-4-wrapper .project-screenshot,
-.project-4-wrapper .project-description {
-    border: 1px solid red;
+.project-4-wrapper .project-screenshot {
+    background-color: #BDD0E1;
 }
 
-.project-4-wrapper .project-description {
-    border: 1px solid green;
+.project-4-wrapper .project-description .signpost {
+    position: absolute;
+    top: 45%;
+    right: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 50px 25px 0;
+    border-color: transparent white transparent transparent;
 }
 
 .project-5-wrapper {
@@ -150,40 +255,62 @@
     flex-direction: column;
 }
 
-.project-5-wrapper .project-screenshot,
-.project-5-wrapper .project-description {
-    border: 1px solid red;
+.project-5-wrapper .project-screenshot {
+    background-color: #FBF9F9;
 }
 
 .project-5-wrapper .project-description {
     position: absolute;
-    border: 1px solid green;
+     
+}
+
+.project-5-wrapper .project-description .signpost {
+    position: absolute;
+    bottom: 100%;
+    left: 45%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 25px 50px 25px;
+    border-color: transparent transparent white transparent;
 }
 
 .project-6-wrapper {
     flex-direction: row-reverse;
 }
 
-.project-6-wrapper .project-screenshot,
-.project-6-wrapper .project-description {
-    border: 1px solid red;
+.project-6-wrapper .project-screenshot {
+    background-color: #F3F5F7;
 }
 
-.project-6-wrapper .project-description {
-    border: 1px solid green;
+.project-6-wrapper .project-description .signpost {
+    position: absolute;
+    top: 45%;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 0 25px 50px;
+    border-color: transparent transparent transparent white;
 }
 
 .project-7-wrapper {
     flex-direction: row;
 }
 
-.project-7-wrapper .project-screenshot,
-.project-7-wrapper .project-description {
-    border: 1px solid red;
+.project-7-wrapper .project-screenshot {
+    background-color: #ACE5D1;
 }
 
-.project-7-wrapper .project-description {
-    border: 1px solid green;
+.project-7-wrapper .project-description .signpost {
+    position: absolute;
+    top: 45%;
+    right: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 50px 25px 0;
+    border-color: transparent white transparent transparent;
 }
 
 .project-8-wrapper {
@@ -191,27 +318,43 @@
     flex-direction: column;
 }
 
-.project-8-wrapper .project-screenshot,
-.project-8-wrapper .project-description {
-    border: 1px solid red;
+.project-8-wrapper .project-screenshot {
+    background-color: #EDD3E0;
 }
 
 .project-8-wrapper .project-description {
     position: absolute;
-    border: 1px solid green;
+     
+}
+
+.project-8-wrapper .project-description .signpost {
+    position: absolute;
+    bottom: 100%;
+    left: 45%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 25px 50px 25px;
+    border-color: transparent transparent white transparent;
 }
 
 .project-9-wrapper {
     flex-direction: row-reverse;
 }
 
-.project-9-wrapper .project-screenshot,
-.project-9-wrapper .project-description {
-    border: 1px solid red;
+.project-9-wrapper .project-screenshot {
+    background-color: #D3E1ED;
 }
 
-.project-6-wrapper .project-description {
-    border: 1px solid green;
+.project-9-wrapper .project-description .signpost {
+    position: absolute;
+    top: 45%;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 0 25px 50px;
+    border-color: transparent transparent transparent white;
 }
 
 /*===== end main section =====*/
