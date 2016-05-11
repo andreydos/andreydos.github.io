@@ -173,6 +173,8 @@
 }
 
 .project-screenshot {
+    display: flex;
+    vertical-align: middle;
     position: relative;
     opacity: .8;
     overflow: hidden;
@@ -182,11 +184,67 @@
     opacity: 1;
 }
 
+.project-source {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    background-color: rgba(211,211,211,.5);
+    border-radius: 0 0 10px 10px;
+    opacity: 0;
+    transition: .5s;
+}
+
+@media screen and (max-width : 992px) {
+    .project-source {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width : 480px) {
+    .project-source {
+        width: 80%;
+    }
+}
+
+.project-source a {
+    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid #676868;
+    text-decoration: none;
+    border-radius: 3px;
+    color: black;
+}
+
+@media screen and (max-width : 480px) {
+    .project-source a {
+        margin: 5px 0;
+        padding: 2px;
+    }
+}
+.project-source a:hover {
+    background-color: #676868;
+    color: white;
+    transition: 1s;
+}
+
+.project-screenshot:hover .project-source {
+    top: 0;
+    opacity: 1;
+    transition: .5s;
+}
+
 .image-wrapper {
     width: 60%;
     height: 60%;
     margin: auto;
-    margin-top: 15%;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -326,44 +384,30 @@
         padding: 0;
     }
 }
+@media screen and (max-width : 768px) {
+    .project-title {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
 
-.project-source {
-    position: absolute;
-    top: -10%;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 60%;
-    margin: 0 auto;
-    text-transform: uppercase;
-    background-color: rgba(211,211,211,.5);
-    border-radius: 0 0 10px 10px;
-    opacity: 0;
-    transition: .5s;
+    .description-list {
+        margin-top: 0;
+        font-size: 14px;
+    }
 }
 
-.project-screenshot:hover .project-source {
-    top: 0;
-    opacity: 1;
-    transition: .5s;
+@media screen and (max-width : 420px) {
+    .project-title {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .description-list {
+        margin-top: 0;
+        font-size: 12px;
+    }
 }
 
-.project-source a {
-    margin: 10px 0;
-    padding: 5px;
-    border: 1px solid #676868;
-    text-decoration: none;
-    border-radius: 3px;
-    color: black;
-}
-
-.project-source a:hover {
-    background-color: #676868;
-    color: white;
-    transition: 1s;
-}
 
 /*===== END projects - common styles =====*/
 
