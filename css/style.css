@@ -398,13 +398,11 @@
 
 @media screen and (max-width : 420px) {
     .project-title {
-        font-size: 14px;
         margin-bottom: 0;
     }
 
     .description-list {
         margin-top: 0;
-        font-size: 12px;
     }
 }
 
