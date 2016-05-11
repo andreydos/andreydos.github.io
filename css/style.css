@@ -16,18 +16,52 @@
     z-index: 10;
 }
 
-.site-title,
-.header-contact {
-    display: inline-block;
-}
-
 .site-title {
     padding: 10px;
 }
 
 .header-contact {
     width: 20%;
-    margin: 25px 0;
+    margin: 25px 35px;
+}
+
+@media screen and (max-width : 1200px) {
+    #header {
+        display: block;
+        text-align: center;
+    }
+
+    .site-title,
+    .header-contact {
+        display: block;
+    }
+    .site-title {
+        margin: 10px auto;
+    }
+
+    .header-contact {
+        width: 40%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width : 768px) {
+
+    .header-contact {
+        width: 60%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width : 480px) {
+
+    .header-contact {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
 }
 
 .socials {
@@ -95,6 +129,14 @@
     color: #676868;
 }
 
+@media screen and (max-width : 768px) {
+    .greeting {
+        width: 80%;
+        font-size: 1.5em;
+    }
+}
+
+
 /*===== projects - common styles =====*/
 .projects-section {
     display: flex;
@@ -102,11 +144,21 @@
     flex-wrap: wrap;
 }
 
+.project-screenshot {
+    position: relative;
+    opacity: .8;
+    overflow: hidden;
+}
+
+.project-screenshot:hover {
+    opacity: 1;
+}
+
 .image-wrapper {
     width: 60%;
     height: 60%;
     margin: auto;
-    margin-top: 20%;
+    margin-top: 15%;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -119,16 +171,48 @@
     height: 500px;
 }
 
+@media screen and (max-width : 1650px) {
+    .block-height {
+        height: 450px;
+    }
+}
+
+@media screen and (max-width : 1450px) {
+    .block-height {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width : 1200px) {
+    .block-height {
+        height: 350px;
+    }
+}
+
+@media screen and (max-width : 992px) {
+    .block-height {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width : 768px) {
+    .block-height {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width : 480px) {
+
+}
+
+@media screen and (max-width : 320px) {
+
+}
+
 .project-title {
+    text-transform: uppercase;
     text-align: center;
 }
-
-
-.break-row {
-    width: 33.333%;
-}
-
-
 
 
 .project-1-wrapper,
@@ -143,26 +227,113 @@
     display: flex;
 }
 
+/*for description and screenshot section*/
 .direction-row {
     width: 50%;
 }
 
+@media screen and (max-width : 480px) {
+    .direction-row {
+        width: 100%;
+    }
+}
+
+/*for description and screenshot section*/
 .direction-column {
     width: 100%;
 }
 
-.row-block {
-    width: 66.666%;
+@media screen and (max-width : 768px) {
+    .direction-column {
+        width: 50%;
+    }
 }
 
 .column-block {
+    position: relative;
+    flex-direction: column;
     width: 33.333%;
+}
+
+.row-block {
+    flex-direction: row-reverse;
+    width: 66.666%;
+}
+
+@media screen and (max-width : 768px) {
+    .column-block {
+        width: 100%;
+        flex-direction: row-reverse;
+    }
+
+    .row-block {
+        width: 100%;
+    }
+    .row-block:nth-child(3) {
+        flex-direction: row;
+    }
+
+    .row-block:nth-child(4) {
+        flex-direction: row-reverse;
+
+    }
+
+    .column-block:nth-child(5) {
+        flex-direction: row;
+    }
+
+    .row-block:nth-child(9) {
+        flex-direction: row;
+    }
 }
 
 .project-description {
     position: relative;
     padding: 10px 5%;
+}
 
+@media screen and (max-width : 768px) {
+    .project-description {
+        padding: 0;
+    }
+}
+
+.project-source {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    background-color: rgba(211,211,211,.5);
+    border-radius: 0 0 10px 10px;
+    opacity: 0;
+    transition: .5s;
+}
+
+.project-screenshot:hover .project-source {
+    top: 0;
+    opacity: 1;
+    transition: .5s;
+}
+
+.project-source a {
+    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid #676868;
+    text-decoration: none;
+    border-radius: 3px;
+    color: black;
+}
+
+.project-source a:hover {
+    background-color: #676868;
+    color: white;
+    transition: 1s;
 }
 
 /*===== END projects - common styles =====*/
@@ -171,7 +342,6 @@
 .project-1-wrapper {
     flex-direction: row;
 }
-
 
 .project-1-wrapper .project-screenshot {
     background-color: #D0E8D4;
@@ -188,17 +358,18 @@
     border-color: transparent white transparent transparent;
 }
 
-.project-2-wrapper {
-    position: relative;
-    flex-direction: column;
-}
-
 .project-2-wrapper .project-screenshot {
     background-color: #9AC0DD;
 }
 
 .project-2-wrapper .project-description {
     position: absolute;
+}
+
+@media screen and (max-width : 768px) {
+    .project-2-wrapper .project-description {
+        position: relative;
+    }
 }
 
 .project-2-wrapper .project-description .signpost {
@@ -210,6 +381,15 @@
     border-style: solid;
     border-width: 0 25px 50px 25px;
     border-color: transparent transparent white transparent;
+}
+
+@media screen and (max-width : 768px) {
+    .project-2-wrapper .project-description .signpost {
+        top: 45%;
+        left: 100%;
+        border-width: 25px 0 25px 50px;
+        border-color: transparent transparent transparent white;
+    }
 }
 
 .project-3-wrapper {
@@ -231,6 +411,23 @@
     border-color: transparent transparent transparent white;
 }
 
+@media screen and (max-width : 768px) {
+    .project-3-wrapper .project-description .signpost {
+        display: none;
+    }
+
+    .project-3-wrapper .project-screenshot .signpost {
+        position: absolute;
+        top: 45%;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 25px 50px 25px 0;
+        border-color: transparent white transparent transparent;
+    }
+}
+
 .project-4-wrapper {
     flex-direction: row;
 }
@@ -250,9 +447,13 @@
     border-color: transparent white transparent transparent;
 }
 
-.project-5-wrapper {
-    position: relative;
-    flex-direction: column;
+@media screen and (max-width : 768px) {
+    .project-4-wrapper .project-description .signpost {
+        top: 45%;
+        left: 100%;
+        border-width: 25px 0 25px 50px;
+        border-color: transparent transparent transparent white;
+    }
 }
 
 .project-5-wrapper .project-screenshot {
@@ -261,7 +462,13 @@
 
 .project-5-wrapper .project-description {
     position: absolute;
-     
+
+}
+@media screen and (max-width : 768px) {
+    .project-5-wrapper .project-description {
+        position: relative;
+
+    }
 }
 
 .project-5-wrapper .project-description .signpost {
@@ -273,6 +480,23 @@
     border-style: solid;
     border-width: 0 25px 50px 25px;
     border-color: transparent transparent white transparent;
+}
+
+@media screen and (max-width : 768px) {
+    .project-5-wrapper .project-description .signpost {
+        display: none;
+    }
+
+    .project-5-wrapper .project-screenshot .signpost {
+        position: absolute;
+        top: 45%;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 25px 50px 25px 0;
+        border-color: transparent white transparent transparent;
+    }
 }
 
 .project-6-wrapper {
@@ -313,11 +537,6 @@
     border-color: transparent white transparent transparent;
 }
 
-.project-8-wrapper {
-    position: relative;
-    flex-direction: column;
-}
-
 .project-8-wrapper .project-screenshot {
     background-color: #EDD3E0;
 }
@@ -325,6 +544,12 @@
 .project-8-wrapper .project-description {
     position: absolute;
      
+}
+
+@media screen and (max-width : 768px) {
+    .project-8-wrapper .project-description {
+        position: relative;
+    }
 }
 
 .project-8-wrapper .project-description .signpost {
@@ -336,6 +561,15 @@
     border-style: solid;
     border-width: 0 25px 50px 25px;
     border-color: transparent transparent white transparent;
+}
+
+@media screen and (max-width : 768px) {
+    .project-8-wrapper .project-description .signpost {
+        top: 45%;
+        left: 100%;
+        border-width: 25px 0 25px 50px;
+        border-color: transparent transparent transparent white;
+    }
 }
 
 .project-9-wrapper {
@@ -356,6 +590,25 @@
     border-width: 25px 0 25px 50px;
     border-color: transparent transparent transparent white;
 }
+
+@media screen and (max-width : 768px) {
+    .project-9-wrapper .project-description .signpost {
+        display: none;
+    }
+
+    .project-9-wrapper .project-screenshot .signpost {
+        position: absolute;
+        top: 45%;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 25px 50px 25px 0;
+        border-color: transparent white transparent transparent;
+    }
+}
+
+
 
 /*===== end main section =====*/
 
