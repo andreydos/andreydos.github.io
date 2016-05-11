@@ -176,12 +176,8 @@
     display: flex;
     vertical-align: middle;
     position: relative;
-    opacity: .8;
+    opacity: .7;
     overflow: hidden;
-}
-
-.project-screenshot:hover {
-    opacity: 1;
 }
 
 .project-source {
@@ -362,7 +358,6 @@
 
     .row-block:nth-child(4) {
         flex-direction: row-reverse;
-
     }
 
     .column-block:nth-child(5) {
@@ -381,6 +376,13 @@
     flex-direction: column;
     padding: 10px 5%;
 }
+
+.column-block:hover .project-screenshot,
+.row-block:hover .project-screenshot{
+    opacity: .9;
+}
+
+
 
 @media screen and (max-width : 768px) {
     .project-description {
