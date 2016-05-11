@@ -50,17 +50,19 @@
 
     .header-contact {
         width: 60%;
-        margin: auto;
-        margin-bottom: 20px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    .site-title {
+        margin: 0 auto;
     }
 }
 
 @media screen and (max-width : 480px) {
 
-    .header-contact {
-        width: 90%;
-        margin: auto;
-        margin-bottom: 20px;
+    .site-title {
+        font-size: 1em;
     }
 }
 
@@ -82,6 +84,19 @@
     border-radius: 50%;
     text-align: center;
 }
+
+@media screen and (max-width : 768px) {
+    .socials-link {
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+        background: white;
+        border-radius: 50%;
+        text-align: center;
+    }
+}
+
 .socials-link:hover {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
@@ -96,6 +111,20 @@
 .socials-link i.fa-mobile {
     font-size: 26px;
     line-height: 1.5;
+}
+
+@media screen and (max-width : 768px) {
+    .socials-link i {
+        font-size: 18px;
+        line-height: 1.7;
+        color: #252222;
+    }
+
+    .socials-link i.fa-mobile {
+        font-size: 22px;
+        line-height: 1.4;
+    }
+
 }
 
 .socials-link:hover .fa-facebook{
@@ -232,11 +261,7 @@
     width: 50%;
 }
 
-@media screen and (max-width : 480px) {
-    .direction-row {
-        width: 100%;
-    }
-}
+
 
 /*for description and screenshot section*/
 .direction-column {
